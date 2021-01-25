@@ -28,3 +28,5 @@
 
 #Ingore keep files
 *.keep
+
+/.idea
