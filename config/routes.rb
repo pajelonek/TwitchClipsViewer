@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       get '/jobs/:id', to: 'jobs#show'
       patch '/jobs/:id', to: 'jobs#update'
       delete '/jobs/:id', to: 'jobs#destroy'
+      get '/getClips', to: 'clips#get_clips'
     end
   end
 end
