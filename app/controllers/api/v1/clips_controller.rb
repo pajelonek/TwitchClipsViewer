@@ -11,7 +11,7 @@ module Api::V1
         "Client-ID" => "k0p7lgsthuzos2rbeh8cry5zdx4uew"
       }
       response = HTTParty.get(url, :headers => headers)
-      render json: response.parsed_response
+      render json: JSON.parse(response.body)['clips']
     end
   end
 end
