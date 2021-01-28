@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import JobsList from "./components/JobsList";
 import Album from "./components/Album"
+import Header from "./components/Header"
 
 function App() {
 
   return (
       <div className="App">
-        <h1>Jobs</h1>
+          <Header/>
           <Album />
       </div>
   );
