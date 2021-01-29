@@ -71,11 +71,6 @@ GEM
       dotenv (= 2.7.6)
       railties (>= 3.2)
     erubi (1.10.0)
-    faraday (1.3.0)
-      faraday-net_http (~> 1.0)
-      multipart-post (>= 1.2, < 3)
-      ruby2_keywords
-    faraday-net_http (1.0.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     httparty (0.18.1)
@@ -99,7 +94,6 @@ GEM
     minitest (5.14.3)
     msgpack (1.3.3-x64-mingw32)
     multi_xml (0.6.0)
-    multipart-post (2.1.1)
     nio4r (2.5.4)
     nokogiri (1.11.1-x64-mingw32)
       racc (~> 1.4)
@@ -108,6 +102,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.1.1)
@@ -137,7 +133,6 @@ GEM
       rake (>= 0.8.7)
       thor (~> 1.0)
     rake (13.0.3)
-    ruby2_keywords (0.0.4)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -162,10 +157,10 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   dotenv-rails
-  faraday
   httparty
   pg (~> 1.1)
   puma (~> 5.0)
+  rack-cors
   rails (~> 6.1.1)
   tzinfo-data
 
