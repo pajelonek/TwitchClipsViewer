@@ -10,8 +10,8 @@ export default function Album() {
     return (
         <React.Fragment>
             <CssBaseline/>
-            <AlbumMenu/>
             <main>
+                <AlbumMenu/>
                 <HeroContent/>
                 <MultiContainer/>
             </main>
