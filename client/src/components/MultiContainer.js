@@ -42,7 +42,7 @@ class MultiContainer extends Component {
         if (!this.state.clipResponse)
             return <Container className={useStyles.cardGrid} maxWidth="md"/>;
         else {
-            return <Container className={useStyles.cardGrid} maxWidth="md">
+            return <Container className={useStyles.cardGrid} style={{marginTop: "5%",}} maxWidth="md">
                 <ClipsGrid props={this.state.clipResponse}/>
             </Container>;
         }

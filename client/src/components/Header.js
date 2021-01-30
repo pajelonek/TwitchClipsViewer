@@ -16,10 +16,11 @@ export default function Header() {
     return (
         <div>
             <Grid container spacing={2} justify="center">
-                <Grid item>
+                <Grid xs={4}/>
+                <Grid xs={4} item>
                     <h1>TwitchClipsViewer</h1>
                 </Grid>
-                <Grid item style={{display: 'flex', alignItems: 'center', float:'right'}}>
+                <Grid item xs={4} style={{display: 'flex', alignItems: 'center', justifyContent:'flex-end'}}>
                     <Brightness4Icon style={{ fontSize: 30}}/>
                     <Switch
                         checked={state.checkedB}
