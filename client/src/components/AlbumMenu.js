@@ -1,6 +1,9 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import {ButtonGroup, ClickAwayListener, Grow, MenuItem, MenuList, Paper, Popper, Toolbar} from "@material-ui/core";
+import {
+    ButtonGroup, ClickAwayListener, Grow,
+    MenuItem, MenuList, Paper, Popper, Toolbar
+} from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import AppBar from "@material-ui/core/AppBar";
@@ -54,6 +57,7 @@ export default function AlbumMenu() {
                             {...TransitionProps}
                             style={{
                                 transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom',
+                                width: '130px',
                             }}
                         >
                             <Paper>
