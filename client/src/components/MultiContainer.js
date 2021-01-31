@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Container from "@material-ui/core/Container";
 import {makeStyles} from "@material-ui/core/styles";
 import ClipsGrid from './ClipsGrid';
+import {MContext} from "./MyProvider";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -40,11 +41,28 @@ class MultiContainer extends Component {
 
     render() {
         if (!this.state.clipResponse)
-            return <Container className={useStyles.cardGrid} maxWidth="md"/>;
+            return (
+                <div>
+                    <Container className={useStyles.cardGrid} maxWidth="md"/>
+                    <MContext.Consumer>
+                        {(context) => (
+                            <p>{context.state.message}}</p>)}
+                    </MContext.Consumer>
+                </div>
+            );
+
         else {
-            return <Container className={useStyles.cardGrid} style={{marginTop: "5%",}} maxWidth="md">
-                <ClipsGrid props={this.state.clipResponse}/>
-            </Container>;
+            return (
+                <div>
+                    <Container className={useStyles.cardGrid} style={{marginTop: "5%",}} maxWidth="md">
+                        <ClipsGrid props={this.state.clipResponse}/>
+                    </Container>
+                    <MContext.Consumer>
+                        {(context) => (
+                            <p>{context.state.message}</p>)}
+                    </MContext.Consumer>
+                </div>
+            );
         }
     }
 }

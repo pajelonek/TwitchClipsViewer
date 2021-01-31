@@ -7,9 +7,10 @@ import {
 import Button from "@material-ui/core/Button";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import AppBar from "@material-ui/core/AppBar";
-
+import {MContext} from "./MyProvider";
 
 export default function AlbumMenu() {
+
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
     const [selectedIndex, setSelectedIndex] = React.useState(1);
@@ -78,6 +79,13 @@ export default function AlbumMenu() {
                         </Grow>
                     )}
                 </Popper>
+                <div>
+                    <MContext.Consumer>
+                        {(context) => (
+                            <button onClick={()=>{context.setMessage("New Arrival")}}>Send</button>
+                        )}
+                    </MContext.Consumer>
+                </div>
             </Toolbar>
         </Grid>
     </AppBar>;

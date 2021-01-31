@@ -4,6 +4,7 @@ import Footer from './Footer';
 import HeroContent from "./HeroContent";
 import MultiContainer from "./MultiContainer";
 import AlbumMenu from "./AlbumMenu";
+import MyProvider from "./MyProvider";
 
 export default function Album() {
 
@@ -11,9 +12,11 @@ export default function Album() {
         <React.Fragment>
             <CssBaseline/>
             <main>
-                <HeroContent/>
-                <AlbumMenu/>
-                <MultiContainer/>
+                <MyProvider>
+                    <HeroContent/>
+                    <AlbumMenu/>
+                    <MultiContainer/>
+                </MyProvider>
             </main>
             <Footer/>
         </React.Fragment>
