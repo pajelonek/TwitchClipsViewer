@@ -16,10 +16,10 @@ module Api::V1
 
     def post_clips
       if JSON.parse(request.body.read)['test'] == nil
-        e = Errors::Invalid.new
-        render text:Errors::ErrorSerializer.new(e), status: e.status
+        e = Errors::StandardError.new
+        render json: Errors::ErrorSerializer.new(e), status: e.status
+      else render text:"Hello #{request.body.read}"
       end
-      # render text:"Hello #{request.body.read}"
     end
 
 
