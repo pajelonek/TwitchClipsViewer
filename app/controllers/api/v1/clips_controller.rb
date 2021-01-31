@@ -13,5 +13,15 @@ module Api::V1
       response = HTTParty.get(url, :headers => headers)
       render json: JSON.parse(response.body)
     end
+
+    def post_clips
+      if JSON.parse(request.body.read)['test'] == nil
+        e = Errors::Invalid.new
+        render text:Errors::ErrorSerializer.new(e), status: e.status
+      end
+      # render text:"Hello #{request.body.read}"
+    end
+
+
   end
 end

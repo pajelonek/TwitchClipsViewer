@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       patch '/jobs/:id', to: 'jobs#update'
       delete '/jobs/:id', to: 'jobs#destroy'
       get '/getClips', to: 'clips#get_clips'
+      post '/postClips', to: 'clips#post_clips'
     end
   end
 end
