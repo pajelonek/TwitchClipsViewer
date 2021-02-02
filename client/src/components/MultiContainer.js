@@ -32,7 +32,7 @@ class MultiContainer extends Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:3001/api/v1/getClips")
+        fetch("http://localhost:3001/api/v1/getClips?period=month&limit=9")
             .then(response => response.json())
             .then(response => this.setState({
                 clipResponse: response
